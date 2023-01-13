@@ -18,9 +18,11 @@ export function TimeText({ id, totalSeconds }) {
   const minutes = `${parseInt((time / 60) % 60)}`.padStart(2, "0");
   const seconds = `${parseInt(time % 60)}`.padStart(2, "0");
 
+  const timeUnitsText =
+    hours === "00" ? `${minutes}:${seconds}` : `${hours}:${minutes}:${seconds}`;
   return (
     <text id={id} className="timeText" x="50%" y="50%" text-anchor="middle">
-      {hours}:{minutes}:{seconds}
+      {timeUnitsText}
     </text>
   );
 }

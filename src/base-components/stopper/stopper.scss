@@ -1,12 +1,8 @@
 $circle-radius: 250px;
-$circumference: 2 * 3.14 * $circle-radius; // girth
+$circumference: 2 * 3.14 * $circle-radius; // "circumference" = "girth"
 
 @keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-
-  100% {
+  to {
     stroke-dashoffset: $circumference;
   }
 }

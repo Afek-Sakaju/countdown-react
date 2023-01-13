@@ -1,9 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import { TimeText } from "../timeText/timeText";
+import { MAXIMUM_TIME_LIMIT, MINIMUM_TIME_LIMIT } from "../../consts";
 import "./stopper.scss";
 
 export function Stopper({ id, totalSeconds, remainColor, elapsedColor }) {
+  if (totalSeconds < MINIMUM_TIME_LIMIT) totalSeconds = MINIMUM_TIME_LIMIT;
+  else if (totalSeconds > MAXIMUM_TIME_LIMIT) totalSeconds = MAXIMUM_TIME_LIMIT;
+
   return (
     <svg id="stopper-container">
       <circle
