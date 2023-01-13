@@ -1,0 +1,21 @@
+#stopper-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.stopper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 20px solid green;
+  background-color: transparent;
+  font-size: 100px;
+}
