@@ -1,5 +1,5 @@
 $circle-radius: 250px;
-$circumference: 2 * 3.14 * $circle-radius;
+$circumference: 2 * 3.14 * $circle-radius; // girth
 
 @keyframes stroke-animation {
   0% {
