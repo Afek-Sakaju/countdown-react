@@ -2,17 +2,30 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./timeText.scss";
 
-export function TimeText({ size, totalSeconds }) {
+export function TimeText({ stopTime, size, totalSeconds }) {
   const [time, setTime] = useState(totalSeconds);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      if (time === 0) clearInterval(intervalId);
-      else setTime((time) => time - 1);
+      setTime((t) => t - 1);
     }, 1000);
 
-    return () => clearInterval(intervalId);
+    const timeoutId = setTimeout(() => {
+      clearInterval(intervalId);
+    }, (time ?? 0) * 1000);
+
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+    };
   }, []);
+
+  // useEffect(() => {
+  //   if(stopTime){
+  //     clearInterval(intervalId);
+  //     clearTimeout(timeoutId);
+  //   }
+  // }, [stopTime])
 
   const hours = `${parseInt(time / 60 / 60)}`.padStart(2, "0");
   const minutes = `${parseInt((time / 60) % 60)}`.padStart(2, "0");
