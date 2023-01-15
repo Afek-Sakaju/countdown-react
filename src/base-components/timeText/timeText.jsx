@@ -18,7 +18,7 @@ export function TimeText({ stopTime, size, totalSeconds }) {
       clearInterval(intervalId);
       clearTimeout(timeoutId);
     };
-  }, []);
+  });
 
   // useEffect(() => {
   //   if(stopTime){
