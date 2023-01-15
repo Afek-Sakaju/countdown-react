@@ -20,13 +20,6 @@ export function TimeText({ stopTime, size, totalSeconds }) {
     };
   });
 
-  // useEffect(() => {
-  //   if(stopTime){
-  //     clearInterval(intervalId);
-  //     clearTimeout(timeoutId);
-  //   }
-  // }, [stopTime])
-
   const hours = `${parseInt(time / 60 / 60)}`.padStart(2, "0");
   const minutes = `${parseInt((time / 60) % 60)}`.padStart(2, "0");
   const seconds = `${parseInt(time % 60)}`.padStart(2, "0");
