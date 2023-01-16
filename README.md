@@ -12,7 +12,7 @@
 
 - **The command to run the project**
   - `npm run start`<br /> runs the project
-  - `npm run build`<br /> optimizes the code, and sets the environment for the app to run.
+
 ---
 
 ### **Example of using the project's stopper:**
