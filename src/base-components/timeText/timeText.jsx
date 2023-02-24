@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import "./timeText.scss";
 
-export function TimeText({ stopTime, size, totalSeconds }) {
+export function TimeText({ size, totalSeconds }) {
   const [time, setTime] = useState(totalSeconds);
 
   useEffect(() => {

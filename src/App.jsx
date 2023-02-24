@@ -1,5 +1,5 @@
 import React from "react";
-import { Stopper } from "./base-components";
+import { Stopper } from "./components";
 
 function App() {
   return (

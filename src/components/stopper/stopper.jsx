@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { TimeText } from "../timeText/timeText";
-import { MAXIMUM_TIME_LIMIT, MINIMUM_TIME_LIMIT } from "../../consts";
+import { MAXIMUM_TIME_LIMIT, MINIMUM_TIME_LIMIT } from "../../utils";
+import { TimeText } from "../../base-components";
 import "./stopper.scss";
 
 export function Stopper({

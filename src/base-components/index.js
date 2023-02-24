@@ -1,1 +1,1 @@
-export * from "./stopper/stopper";
+export * from "./timeText/timeText";
