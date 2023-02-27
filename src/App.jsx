@@ -1,5 +1,5 @@
 import React from "react";
-import { Stopper } from "./base-components";
+import { Countdown } from "./components";
 
 function App() {
   return (
@@ -12,13 +12,12 @@ function App() {
         flexWrap: "wrap",
       }}
     >
-      <Stopper
-        id="stopper-0"
+      <Countdown
         totalSeconds={120}
         elapsedColor={"blue"}
         remainColor={"purple"}
       />
-      <Stopper id="stopper-1" totalSeconds={62} />
+      <Countdown totalSeconds={62} />
     </div>
   );
 }

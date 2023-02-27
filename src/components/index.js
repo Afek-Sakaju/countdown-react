@@ -1,1 +1,1 @@
-export * from "./small-header/small-header";
+export * from "./Countdown/Countdown";

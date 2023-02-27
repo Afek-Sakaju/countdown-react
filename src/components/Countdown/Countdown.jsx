@@ -1,22 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { TimeText } from "../timeText/timeText";
+import { TimeText } from "../../base-components/TimeText/TimeText";
 import { MAXIMUM_TIME_LIMIT, MINIMUM_TIME_LIMIT } from "../../consts";
-import "./stopper.scss";
+import "./Countdown.scss";
 
-export function Stopper({
-  id,
-  radius,
-  totalSeconds,
-  remainColor,
-  elapsedColor,
-}) {
+export function Countdown({ radius, totalSeconds, remainColor, elapsedColor }) {
   if (totalSeconds < MINIMUM_TIME_LIMIT) totalSeconds = MINIMUM_TIME_LIMIT;
   else if (totalSeconds > MAXIMUM_TIME_LIMIT) totalSeconds = MAXIMUM_TIME_LIMIT;
 
   return (
-    <svg className="stopper-container">
+    <svg className="countdown-container">
       <g transform={`rotate(-90 ${250 / 2} ${250 / 2})`}>
         <circle
           cx="50%"
@@ -27,8 +21,7 @@ export function Stopper({
           strokeWidth="20"
         />
         <circle
-          id={id}
-          className="stopper-circle"
+          className="countdown-circle"
           cx="50%"
           cy="45%"
           r={radius}
@@ -46,15 +39,14 @@ export function Stopper({
   );
 }
 
-Stopper.propTypes = {
-  id: PropTypes.string,
+Countdown.propTypes = {
   totalSeconds: PropTypes.number,
   remainColor: PropTypes.string,
   elapsedColor: PropTypes.string,
   radius: PropTypes.number,
 };
 
-Stopper.defaultProps = {
+Countdown.defaultProps = {
   totalSeconds: 50,
   remainColor: "green",
   elapsedColor: "grey",

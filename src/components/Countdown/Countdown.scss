@@ -7,7 +7,7 @@ $circumference: 2 * 3.14 * $circle-radius; // "circumference" = "girth"
   }
 }
 
-.stopper-container {
+.countdown-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@ $circumference: 2 * 3.14 * $circle-radius; // "circumference" = "girth"
   width: 250px;
 }
 
-.stopper-circle {
+.countdown-circle {
   stroke-dasharray: $circumference;
   stroke-dashoffset: 0;
 }
