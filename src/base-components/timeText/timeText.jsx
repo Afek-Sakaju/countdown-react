@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-export function TimeText({ size, totalSeconds }) {
+function TimeText({ size, totalSeconds }) {
   const [time, setTime] = useState(totalSeconds);
 
   useEffect(() => {
@@ -41,3 +41,5 @@ TimeText.defaultProps = {
   totalSeconds: 50,
   size: 10,
 };
+
+export default TimeText;

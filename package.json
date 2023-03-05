@@ -1,8 +1,25 @@
 {
-  "name": "my-react-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "circular-countdown-react",
+  "description": "Circular configurable countdown",
+  "author": "afek-sakaju",
+  "keywords": [
+    "react",
+    "components"
+  ],
+  "version": "0.0.1",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afekTheMiniLearner/countdown-react"
+  },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,6 +32,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-with-babel": "del dist && babel src --out-dir dist --copy-files",
     "test": "react-scripts test"
   },
   "eslintConfig": {
@@ -34,5 +52,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2"
   }
 }

@@ -1,1 +1,1 @@
-export * from "./TimeText/TimeText";
+export {default as TimeText} from "./TimeText/TimeText";

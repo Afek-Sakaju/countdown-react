@@ -5,7 +5,7 @@ import { TimeText } from "../../base-components/TimeText/timeText";
 import { MAXIMUM_TIME_LIMIT, MINIMUM_TIME_LIMIT } from "../../consts";
 import "./Countdown.scss";
 
-export function Countdown({ radius, totalSeconds, remainColor, elapsedColor }) {
+function Countdown({ radius, totalSeconds, remainColor, elapsedColor }) {
   if (totalSeconds < MINIMUM_TIME_LIMIT) totalSeconds = MINIMUM_TIME_LIMIT;
   else if (totalSeconds > MAXIMUM_TIME_LIMIT) totalSeconds = MAXIMUM_TIME_LIMIT;
 
@@ -52,3 +52,5 @@ Countdown.defaultProps = {
   elapsedColor: "grey",
   radius: 100,
 };
+
+export default Countdown;

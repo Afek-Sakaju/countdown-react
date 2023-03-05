@@ -1,1 +1,1 @@
-export * from "./Countdown/Countdown";
+export { default as Countdown } from "./Countdown/Countdown";
