@@ -1,11 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { TimeText } from "../../base-components/TimeText/timeText";
+import { TimeText } from "../../base-components";
 import { MAXIMUM_TIME_LIMIT, MINIMUM_TIME_LIMIT } from "../../consts";
 import "./Countdown.scss";
 
-function Countdown({ radius, totalSeconds, remainColor, elapsedColor }) {
+function Countdown({
+  radius,
+  totalSeconds,
+  remainColor,
+  elapsedColor,
+  onDone,
+  shouldStop,
+}) {
   if (totalSeconds < MINIMUM_TIME_LIMIT) totalSeconds = MINIMUM_TIME_LIMIT;
   else if (totalSeconds > MAXIMUM_TIME_LIMIT) totalSeconds = MAXIMUM_TIME_LIMIT;
 
@@ -34,7 +41,12 @@ function Countdown({ radius, totalSeconds, remainColor, elapsedColor }) {
           }}
         />
       </g>
-      <TimeText size={radius / 2.2} totalSeconds={totalSeconds} />
+      <TimeText
+        size={radius / 2.2}
+        totalSeconds={totalSeconds}
+        cb={onDone}
+        shouldStop={shouldStop}
+      />
     </svg>
   );
 }
@@ -44,6 +56,8 @@ Countdown.propTypes = {
   remainColor: PropTypes.string,
   elapsedColor: PropTypes.string,
   radius: PropTypes.number,
+  onDone: PropTypes.func,
+  shouldStop: PropTypes.bool,
 };
 
 Countdown.defaultProps = {
@@ -51,6 +65,8 @@ Countdown.defaultProps = {
   remainColor: "green",
   elapsedColor: "grey",
   radius: 100,
+  onDone: undefined,
+  shouldStop: undefined,
 };
 
 export default Countdown;
