@@ -18,6 +18,11 @@ function App() {
         remainColor={"purple"}
       />
       <Countdown totalSeconds={62} />
+      <Countdown
+        totalSeconds={50}
+        elapsedColor={"black"}
+        remainColor={"yellow"}
+      />
     </div>
   );
 }

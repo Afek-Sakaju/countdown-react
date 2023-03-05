@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { TimeText } from "../../base-components/TimeText/TimeText";
+import { TimeText } from "../../base-components/TimeText/timeText";
 import { MAXIMUM_TIME_LIMIT, MINIMUM_TIME_LIMIT } from "../../consts";
 import "./Countdown.scss";
 
