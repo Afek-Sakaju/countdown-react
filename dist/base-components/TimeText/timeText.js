@@ -18,23 +18,26 @@ function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefine
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function TimeText(_ref) {
   var size = _ref.size,
-    totalSeconds = _ref.totalSeconds;
+    totalSeconds = _ref.totalSeconds,
+    cb = _ref.cb,
+    shouldStop = _ref.shouldStop;
   var _useState = (0, _react.useState)(totalSeconds),
     _useState2 = _slicedToArray(_useState, 2),
     time = _useState2[0],
     setTime = _useState2[1];
   (0, _react.useEffect)(function () {
-    var intervalId = setInterval(function () {
-      setTime(function (t) {
-        return t - 1;
+    var intervalId = !shouldStop && setInterval(function () {
+      setTime(function (seconds) {
+        var updatedSeconds = seconds - 1;
+        if (updatedSeconds <= 0) {
+          cb === null || cb === void 0 ? void 0 : cb();
+          clearInterval(intervalId);
+        }
+        return updatedSeconds;
       });
     }, 1000);
-    var timeoutId = setTimeout(function () {
-      clearInterval(intervalId);
-    }, (time !== null && time !== void 0 ? time : 0) * 1000);
     return function () {
-      clearInterval(intervalId);
-      clearTimeout(timeoutId);
+      intervalId && clearInterval(intervalId);
     };
   });
   var hours = "".concat(parseInt(time / 60 / 60)).padStart(2, "0");
@@ -52,11 +55,15 @@ function TimeText(_ref) {
 }
 TimeText.propTypes = {
   totalSeconds: _propTypes.default.number,
-  size: _propTypes.default.number
+  size: _propTypes.default.number,
+  cb: _propTypes.default.func,
+  shouldStop: _propTypes.default.bool
 };
 TimeText.defaultProps = {
   totalSeconds: 50,
-  size: 10
+  size: 10,
+  cb: undefined,
+  shouldStop: undefined
 };
 var _default = TimeText;
 exports.default = _default;
