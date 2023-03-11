@@ -10,7 +10,7 @@ Object.defineProperty(exports, "Countdown", {
   }
 });
 var _react = _interopRequireDefault(require("react"));
-var _client = _interopRequireDefault(require("react-dom/client"));
+var _reactDom = _interopRequireDefault(require("react-dom"));
 require("./index.css");
 var _App = _interopRequireDefault(require("./App"));
 var _reportWebVitals = _interopRequireDefault(require("./reportWebVitals"));
@@ -19,14 +19,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* Hidden to prevent multiple calling ReactDOMClient.createRoot() 
 in case someone using this as NPM package
 unhide if you want to run the app ! 
+*/
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-); */
+var root = document.getElementById("root");
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), root);
+(0, _reportWebVitals.default)();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
