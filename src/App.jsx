@@ -1,15 +1,11 @@
 import React from "react";
 import { Countdown } from "./components";
+import "./index.css";
 
 function App() {
   return (
     <div className="app-container">
-      <Countdown
-        totalSeconds={120}
-        elapsedColor={"blue"}
-        remainColor={"purple"}
-      />
-      <Countdown totalSeconds={62} />
+      <Countdown />
     </div>
   );
 }

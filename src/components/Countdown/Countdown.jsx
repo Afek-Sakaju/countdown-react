@@ -1,70 +1,53 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { TimeText } from "../../base-components";
 import { MAXIMUM_TIME_LIMIT, MINIMUM_TIME_LIMIT } from "../../consts";
 import "./Countdown.scss";
 
-function Countdown({
-  radius,
-  totalSeconds,
-  remainColor,
-  elapsedColor,
-  onDone,
-  shouldStop,
-}) {
+function Countdown({ totalSeconds, onDone, shouldStop }) {
   if (totalSeconds < MINIMUM_TIME_LIMIT) totalSeconds = MINIMUM_TIME_LIMIT;
   else if (totalSeconds > MAXIMUM_TIME_LIMIT) totalSeconds = MAXIMUM_TIME_LIMIT;
 
   return (
-    <svg className="countdown-container">
-      <g transform={`rotate(-90 ${250 / 2} ${250 / 2})`}>
-        <circle
-          cx="50%"
-          cy="45%"
-          r={radius}
-          fill="none"
-          stroke={elapsedColor}
-          strokeWidth="20"
-        />
-        <circle
-          className="countdown-circle"
-          cx="50%"
-          cy="45%"
-          r={radius}
-          fill="none"
-          stroke={remainColor}
-          strokeWidth="20"
-          transform={""}
-          style={{
-            animation: `stroke-animation ${totalSeconds}s linear forwards`,
-          }}
-        />
-      </g>
-      <TimeText
-        size={radius / 2.2}
-        totalSeconds={totalSeconds}
-        cb={onDone}
-        shouldStop={shouldStop}
-      />
-    </svg>
+    <div className="skill">
+      <div className="outer">
+        <div className="inner">
+          <div id="number">65%</div>
+        </div>
+        <svg
+          className="countdown-svg"
+          xmlns="https://www.w3.org/2000/svg"
+          version="1.1"
+          width="160px"
+          height="160px"
+        >
+          <defs>
+            <linearGradient id="gradient-color">
+              <stop offset="0%" stopColor="red" />
+              <stop offset="100%" stopColor="blue" />
+            </linearGradient>
+          </defs>
+          <circle
+            className="countdown-circle"
+            cx="80"
+            cy="80"
+            r="70"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+    </div>
   );
 }
 
 Countdown.propTypes = {
   totalSeconds: PropTypes.number,
-  remainColor: PropTypes.string,
-  elapsedColor: PropTypes.string,
-  radius: PropTypes.number,
   onDone: PropTypes.func,
   shouldStop: PropTypes.bool,
 };
 
 Countdown.defaultProps = {
   totalSeconds: 50,
-  remainColor: "green",
-  elapsedColor: "grey",
-  radius: 100,
   onDone: undefined,
   shouldStop: undefined,
 };

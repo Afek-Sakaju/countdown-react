@@ -1,18 +1,24 @@
+body,
+html,
+#master {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font: normal 16px "FiraSans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  height: 90vh;
-  width: 90vw;
 }
 
 .app-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2em;
-  flex-wrap: wrap;
+  min-height: 98vh;
+  min-width: 98vw;
 }
