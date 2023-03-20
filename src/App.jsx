@@ -5,7 +5,7 @@ import "./index.css";
 function App() {
   return (
     <div className="app-container">
-      <Countdown />
+      <Countdown color1="yellow" size="large" />
     </div>
   );
 }

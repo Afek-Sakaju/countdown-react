@@ -5,14 +5,34 @@
 }
 
 .skill {
-  width: 160px;
-  height: 160px;
   position: relative;
+  &.small {
+    width: 160px;
+    height: 160px;
+  }
+  &.medium {
+    width: 180px;
+    height: 180px;
+  }
+  &.large {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .outer {
-  width: 160px;
-  height: 160px;
+  &.small {
+    width: 160px;
+    height: 160px;
+  }
+  &.medium {
+    width: 180px;
+    height: 180px;
+  }
+  &.large {
+    width: 200px;
+    height: 200px;
+  }
   padding: 20px;
   border-radius: 50%;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
@@ -23,8 +43,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
+  &.small {
+    width: 120px;
+    height: 120px;
+  }
+  &.medium {
+    width: 140px;
+    height: 140px;
+  }
+  &.large {
+    width: 160px;
+    height: 160px;
+  }
   border-radius: 50%;
   box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
     inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
@@ -34,18 +64,39 @@
 
 #number {
   font-weight: 600;
+  font-size: 2em;
   color: grey;
 }
 
 .countdown-circle {
-  fill: none;
   stroke: url(#gradient-color);
   stroke-width: 20px;
-  stroke-dasharray: 450;
   stroke-dashoffset: 0;
+  fill: none;
+  &.small {
+    stroke-dasharray: 450;
+  }
+  &.medium {
+    stroke-dasharray: 500;
+  }
+  &.large {
+    stroke-dasharray: 560;
+  }
 }
 
 .countdown-svg {
+  &.small {
+    width: 160px;
+    height: 160px;
+  }
+  &.medium {
+    width: 180px;
+    height: 180px;
+  }
+  &.large {
+    width: 200px;
+    height: 200px;
+  }
   position: absolute;
   top: 0;
   left: 0;
