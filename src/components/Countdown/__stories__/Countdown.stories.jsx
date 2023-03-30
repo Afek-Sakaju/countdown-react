@@ -8,7 +8,7 @@ export default {
   component: CountDown,
   parameters: {
     controls: {
-      exclude: /^onDone$/g,
+      exclude: /^(onDone|shouldStop)$/g,
     },
   },
   decorators: [

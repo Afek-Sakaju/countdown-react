@@ -69,8 +69,8 @@ Countdown.propTypes = {
 
 Countdown.defaultProps = {
   size: "medium",
-  color1: "blue",
-  color2: "red",
+  color1: "red",
+  color2: "blue",
   totalSeconds: 50,
   onDone: undefined,
   shouldStop: undefined,
