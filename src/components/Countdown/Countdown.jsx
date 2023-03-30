@@ -29,13 +29,13 @@ function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
   }
 
   return (
-    <div className={`skill ${svgCircleClass}`}>
-      <div className={`outer ${svgCircleClass}`}>
-        <div className={`inner ${svgCircleClass}`}>
+    <div className={`countdown-content-wrapper ${svgCircleClass}`}>
+      <div className={"outer-container"}>
+        <div className={"inner-container"}>
           <div id="number">65</div>
         </div>
         <svg
-          className={`countdown-svg ${svgCircleClass}`}
+          className={"countdown-svg"}
           xmlns="https://www.w3.org/2000/svg"
           version="1.1"
         >
@@ -46,7 +46,7 @@ function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
             </linearGradient>
           </defs>
           <circle
-            className={`countdown-circle ${svgCircleClass}`}
+            className={"countdown-circle"}
             strokeLinecap="round"
             cx={svgCircleStyle.cx}
             cy={svgCircleStyle.cy}

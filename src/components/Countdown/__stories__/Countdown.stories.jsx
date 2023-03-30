@@ -18,7 +18,9 @@ export default {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "96vh",
+          height: "98vh",
+          width: "98vw",
+          backgroundColor: "black",
         }}
       >
         <Story />

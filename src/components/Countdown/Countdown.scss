@@ -1,103 +1,92 @@
-.skill > * {
+@import "../../utils/variables.scss";
+
+.countdown-content-wrapper {
+  position: relative;
+
+  .inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+      inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+      -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+      0.5px 0.5px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .outer-container {
+    width: inherit;
+    height: inherit;
+
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+      -6px 6px 10px -1px rgba(255, 255, 255, 0.7);
+  }
+
+  .countdown-circle {
+    stroke: url(#gradient-color);
+    stroke-width: 20px;
+    stroke-dashoffset: 0;
+    fill: none;
+  }
+
+  .countdown-svg {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &.small {
+    width: $small-radius-size;
+    height: $small-radius-size;
+
+    .inner-container {
+      width: calc($small-radius-size - 40px);
+      height: calc($small-radius-size - 40px);
+    }
+    .countdown-circle {
+      stroke-dasharray: $small-stroke-dasharray;
+    }
+  }
+
+  &.medium {
+    width: $medium-radius-size;
+    height: $medium-radius-size;
+
+    .inner-container {
+      width: calc($medium-radius-size - 40px);
+      height: calc($medium-radius-size - 40px);
+    }
+    .countdown-circle {
+      stroke-dasharray: $medium-stroke-dasharray;
+    }
+  }
+  &.large {
+    width: $large-radius-size;
+    height: $large-radius-size;
+
+    .inner-container {
+      width: calc($large-radius-size - 40px);
+      height: calc($large-radius-size - 40px);
+    }
+    .countdown-circle {
+      stroke-dasharray: $large-stroke-dasharray;
+    }
+  }
+}
+
+.countdown-content-wrapper > * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.skill {
-  position: relative;
-  &.small {
-    width: 160px;
-    height: 160px;
-  }
-  &.medium {
-    width: 180px;
-    height: 180px;
-  }
-  &.large {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-.outer {
-  &.small {
-    width: 160px;
-    height: 160px;
-  }
-  &.medium {
-    width: 180px;
-    height: 180px;
-  }
-  &.large {
-    width: 200px;
-    height: 200px;
-  }
-  padding: 20px;
-  border-radius: 50%;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px 6px 10px -1px rgba(255, 255, 255, 0.7);
-}
-
-.inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &.small {
-    width: 120px;
-    height: 120px;
-  }
-  &.medium {
-    width: 140px;
-    height: 140px;
-  }
-  &.large {
-    width: 160px;
-    height: 160px;
-  }
-  border-radius: 50%;
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-    0.5px 0.5px 0px rgba(0, 0, 0, 0.15);
 }
 
 #number {
   font-weight: 600;
   font-size: 2em;
   color: grey;
-}
-
-.countdown-circle {
-  stroke: url(#gradient-color);
-  stroke-width: 20px;
-  stroke-dashoffset: 0;
-  fill: none;
-  &.small {
-    stroke-dasharray: 450;
-  }
-  &.medium {
-    stroke-dasharray: 500;
-  }
-  &.large {
-    stroke-dasharray: 560;
-  }
-}
-
-.countdown-svg {
-  &.small {
-    width: 160px;
-    height: 160px;
-  }
-  &.medium {
-    width: 180px;
-    height: 180px;
-  }
-  &.large {
-    width: 200px;
-    height: 200px;
-  }
-  position: absolute;
-  top: 0;
-  left: 0;
 }
