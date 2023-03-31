@@ -1,20 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
-function TimeText({ size, totalSeconds, cb, shouldStop }) {
+function TimeText({ totalSeconds, cb, shouldStop }) {
   const [time, setTime] = useState(totalSeconds);
+  const updatedSeconds = useRef(totalSeconds);
+  const isTimeZero = updatedSeconds.current === 0;
 
   useEffect(() => {
     const intervalId =
       !shouldStop &&
+      !isTimeZero &&
       setInterval(() => {
-        setTime((seconds) => {
-          const updatedSeconds = seconds - 1;
-          if (updatedSeconds <= 0) {
+        setTime(() => {
+          if (--updatedSeconds.current === 0) {
             cb?.();
             clearInterval(intervalId);
           }
-          return updatedSeconds;
+          return updatedSeconds.current;
         });
       }, 1000);
 
@@ -29,23 +31,17 @@ function TimeText({ size, totalSeconds, cb, shouldStop }) {
   const timeUnitsText =
     hours === "00" ? `${minutes}:${seconds}` : `${hours}:${minutes}:${seconds}`;
 
-  return (
-    <text x="45%" y="55%" textAnchor="middle" style={{ fontSize: `${size}px` }}>
-      {timeUnitsText}
-    </text>
-  );
+  return <div className="countdown-time-text">{timeUnitsText}</div>;
 }
 
 TimeText.propTypes = {
   totalSeconds: PropTypes.number,
-  size: PropTypes.number,
   cb: PropTypes.func,
   shouldStop: PropTypes.bool,
 };
 
 TimeText.defaultProps = {
-  totalSeconds: 50,
-  size: 10,
+  totalSeconds: 2,
   cb: undefined,
   shouldStop: undefined,
 };

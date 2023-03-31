@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import "./Countdown.scss";
+import { TimeText } from "../../base-components";
 import {
   MAXIMUM_TIME_LIMIT,
   MINIMUM_TIME_LIMIT,
   isCompatibleSize,
 } from "../../utils";
-import "./Countdown.scss";
 
 function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
   if (totalSeconds < MINIMUM_TIME_LIMIT) totalSeconds = MINIMUM_TIME_LIMIT;
@@ -30,12 +31,12 @@ function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
 
   return (
     <div className={`countdown-content-wrapper ${svgCircleClass}`}>
-      <div className={"outer-container"}>
-        <div className={"inner-container"}>
-          <div id="number">65</div>
+      <div className="outer-container">
+        <div className="inner-container">
+          <TimeText />
         </div>
         <svg
-          className={"countdown-svg"}
+          className="countdown-svg"
           xmlns="https://www.w3.org/2000/svg"
           version="1.1"
         >
@@ -46,7 +47,7 @@ function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
             </linearGradient>
           </defs>
           <circle
-            className={"countdown-circle"}
+            className="countdown-circle"
             strokeLinecap="round"
             cx={svgCircleStyle.cx}
             cy={svgCircleStyle.cy}

@@ -40,6 +40,11 @@
     left: 0;
   }
 
+  .countdown-time-text {
+    font-weight: 600;
+    color: grey;
+  }
+
   &.small {
     width: $small-radius-size;
     height: $small-radius-size;
@@ -50,6 +55,9 @@
     }
     .countdown-circle {
       stroke-dasharray: $small-stroke-dasharray;
+    }
+    .countdown-time-text {
+      font-size: 1.5em;
     }
   }
 
@@ -64,6 +72,9 @@
     .countdown-circle {
       stroke-dasharray: $medium-stroke-dasharray;
     }
+    .countdown-time-text {
+      font-size: 2em;
+    }
   }
   &.large {
     width: $large-radius-size;
@@ -76,6 +87,9 @@
     .countdown-circle {
       stroke-dasharray: $large-stroke-dasharray;
     }
+    .countdown-time-text {
+      font-size: 2.2em;
+    }
   }
 }
 
@@ -83,10 +97,4 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-#number {
-  font-weight: 600;
-  font-size: 2em;
-  color: grey;
 }

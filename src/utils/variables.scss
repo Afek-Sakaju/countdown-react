@@ -1,7 +1,5 @@
-$small-radius-size: 160px;
-$medium-radius-size: 180px;
-$large-radius-size: 200px;
-
-$small-stroke-dasharray: 450;
-$medium-stroke-dasharray: 500;
-$large-stroke-dasharray: 560;
+@keyframes hide-circle-stroke {
+  to {
+    stroke-dasharray: 0;
+  }
+}
