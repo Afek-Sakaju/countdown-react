@@ -11,10 +11,19 @@ function App() {
         color2="yellow"
         key="1"
         size="large"
-        totalSeconds={888888}
+        totalSeconds={3605}
       />
-      <Countdown size="medium" totalSeconds={100} />
-      <Countdown size="small"  color1="grey" color2="lime"  totalSeconds={11} />
+      <Countdown size="medium" totalSeconds={125} />
+      <Countdown size="small" color1="grey" color2="lime" totalSeconds={65} />
+      <Countdown
+        color1="cyan"
+        color2="yellow"
+        key="1"
+        size="large"
+        totalSeconds={40}
+      />
+      <Countdown size="medium" totalSeconds={30} />
+      <Countdown size="small" color1="grey" color2="lime" totalSeconds={10} />
     </div>
   );
 }

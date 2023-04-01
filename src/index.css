@@ -17,9 +17,10 @@ body {
 
 .app-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   gap: 100px;
-  min-height: 98vh;
-  min-width: 98vw;
+  height: 60vh;
+  width: 40vw;
 }

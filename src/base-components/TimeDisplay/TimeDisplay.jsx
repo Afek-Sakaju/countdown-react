@@ -12,10 +12,11 @@ function TimeDisplay({ totalSeconds, onDone, shouldStop }) {
       !isTimeZero &&
       setInterval(() => {
         setTime(() => {
-          if (--updatedSeconds.current === 0) {
+          if (--updatedSeconds.current <= 0) {
             onDone?.();
             clearInterval(intervalId);
           }
+
           return updatedSeconds.current;
         });
       }, 1000);
@@ -23,7 +24,8 @@ function TimeDisplay({ totalSeconds, onDone, shouldStop }) {
     return () => {
       intervalId && clearInterval(intervalId);
     };
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const hours = `${parseInt(time / 60 / 60)}`.padStart(2, "0");
   const minutes = `${parseInt((time / 60) % 60)}`.padStart(2, "0");
