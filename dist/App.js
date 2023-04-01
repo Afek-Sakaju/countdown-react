@@ -14,7 +14,6 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement(_components.Countdown, {
     color1: "cyan",
     color2: "yellow",
-    key: "1",
     size: "large",
     totalSeconds: 3605
   }), /*#__PURE__*/_react.default.createElement(_components.Countdown, {
@@ -28,7 +27,6 @@ function App() {
   }), /*#__PURE__*/_react.default.createElement(_components.Countdown, {
     color1: "cyan",
     color2: "yellow",
-    key: "1",
     size: "large",
     totalSeconds: 40
   }), /*#__PURE__*/_react.default.createElement(_components.Countdown, {
