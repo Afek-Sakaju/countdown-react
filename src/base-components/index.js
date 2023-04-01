@@ -1,1 +1,1 @@
-export { default as TimeText } from "./TimeText/TimeText";
+export { default as TimeDisplay } from "./TimeDisplay/TimeDisplay";

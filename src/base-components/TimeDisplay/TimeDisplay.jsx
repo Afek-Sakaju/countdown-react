@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
-function TimeText({ totalSeconds, cb, shouldStop }) {
+function TimeDisplay({ totalSeconds, onDone, shouldStop }) {
   const [time, setTime] = useState(totalSeconds);
   const updatedSeconds = useRef(totalSeconds);
   const isTimeZero = updatedSeconds.current === 0;
@@ -13,7 +13,7 @@ function TimeText({ totalSeconds, cb, shouldStop }) {
       setInterval(() => {
         setTime(() => {
           if (--updatedSeconds.current === 0) {
-            cb?.();
+            onDone?.();
             clearInterval(intervalId);
           }
           return updatedSeconds.current;
@@ -31,19 +31,19 @@ function TimeText({ totalSeconds, cb, shouldStop }) {
   const timeUnitsText =
     hours === "00" ? `${minutes}:${seconds}` : `${hours}:${minutes}:${seconds}`;
 
-  return <div className="countdown-time-text">{timeUnitsText}</div>;
+  return <div className="countdown-time-display">{timeUnitsText}</div>;
 }
 
-TimeText.propTypes = {
+TimeDisplay.propTypes = {
   totalSeconds: PropTypes.number,
-  cb: PropTypes.func,
+  onDone: PropTypes.func,
   shouldStop: PropTypes.bool,
 };
 
-TimeText.defaultProps = {
+TimeDisplay.defaultProps = {
   totalSeconds: 2,
-  cb: undefined,
+  onDone: undefined,
   shouldStop: undefined,
 };
 
-export default TimeText;
+export default TimeDisplay;

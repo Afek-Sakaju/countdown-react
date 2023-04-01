@@ -20,7 +20,6 @@ export default {
           alignItems: "center",
           height: "98vh",
           width: "98vw",
-          backgroundColor: "black",
         }}
       >
         <Story />
@@ -46,7 +45,7 @@ Default.decorators = [
   ),
 ];
 
-const Template = (args) => <CountDown totalSeconds={200} {...args} />;
+const Template = (args) => <CountDown {...args} />;
 
 export const Custom = Template.bind({});
 Custom.argTypes = {
@@ -67,7 +66,7 @@ Custom.argTypes = {
     control: { type: "boolean" },
     defaultValue: false,
   },
-  totalSeconds: { control: false },
+  totalSeconds: { control: { type: "number" }, defaultValue: 50 },
 };
 Custom.decorators = [
   (Story) => (

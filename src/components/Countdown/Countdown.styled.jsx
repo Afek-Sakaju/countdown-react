@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 import { COUNTDOWN_PROPERTIES } from "../../utils";
 
@@ -11,6 +11,11 @@ export const CountdownContentWrapper = styled.div`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  .countdown-time-display {
+    font-size: ${({ size }) => COUNTDOWN_PROPERTIES[size].timeDisplay.fontSize};
+    font-weight: bold;
   }
 `;
 
@@ -50,20 +55,32 @@ export const CountdownSvg = styled.svg.attrs({
   left: 0;
 `;
 
-const styleCircleBySize = ({ size }) => {
+const CountdownStrokeAnimation = keyframes`
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: var(--dasharray);
+  }
+`;
+
+// duration is in time units of seconds
+const styleCircleByProps = ({ size, duration }) => {
   return css`
-    stroke-dasharray: ${COUNTDOWN_PROPERTIES[size].circle.dasharray};
+    --dasharray: ${COUNTDOWN_PROPERTIES[size].circle.dasharray}px;
+    stroke-dasharray: var(--dasharray);
+    stroke-dashoffset: var(--dasharray);
     cx: ${COUNTDOWN_PROPERTIES[size].circle.cx};
     cy: ${COUNTDOWN_PROPERTIES[size].circle.cy};
     r: ${COUNTDOWN_PROPERTIES[size].circle.r};
+    animation: ${CountdownStrokeAnimation} ${duration}s linear;
   `;
 };
 
 export const Circle = styled.circle`
   stroke: url(#gradient-color);
-  strokeLinecap="round";
+  strokelinecap: round;
   stroke-width: 20px;
-  stroke-dashoffset: 0;
   fill: none;
-  ${styleCircleBySize}
+  ${styleCircleByProps}
 `;

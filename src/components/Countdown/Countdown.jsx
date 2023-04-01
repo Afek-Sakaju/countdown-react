@@ -8,7 +8,7 @@ import {
   Circle,
   CountdownSvg,
 } from "./Countdown.styled";
-import { TimeText } from "../../base-components";
+import { TimeDisplay } from "../../base-components";
 import {
   MAXIMUM_TIME_LIMIT,
   MINIMUM_TIME_LIMIT,
@@ -25,7 +25,11 @@ function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
     <CountdownContentWrapper size={size}>
       <OuterContainer>
         <InnerContainer size={size}>
-          <TimeText />
+          <TimeDisplay
+            totalSeconds={totalSeconds}
+            onDone={onDone}
+            shouldStop={shouldStop}
+          />
         </InnerContainer>
         <CountdownSvg>
           <defs>
@@ -34,7 +38,7 @@ function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
               <stop offset="100%" stopColor={color2} />
             </linearGradient>
           </defs>
-          <Circle size={size} />
+          <Circle size={size} duration={totalSeconds} />
         </CountdownSvg>
       </OuterContainer>
     </CountdownContentWrapper>
