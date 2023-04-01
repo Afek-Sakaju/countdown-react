@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/countdown-react/static/css/main.90cb1622.css",
+    "main.js": "/countdown-react/static/js/main.ab37c92c.js",
+    "index.html": "/countdown-react/index.html",
+    "main.90cb1622.css.map": "/countdown-react/static/css/main.90cb1622.css.map",
+    "main.ab37c92c.js.map": "/countdown-react/static/js/main.ab37c92c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90cb1622.css",
+    "static/js/main.ab37c92c.js"
+  ]
+}
