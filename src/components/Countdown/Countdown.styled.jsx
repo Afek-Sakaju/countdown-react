@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { COUNTDOWN_PROPERTIES } from "../../utils";
 
@@ -50,14 +50,20 @@ export const CountdownSvg = styled.svg.attrs({
   left: 0;
 `;
 
+const styleCircleBySize = ({ size }) => {
+  return css`
+    stroke-dasharray: ${COUNTDOWN_PROPERTIES[size].circle.dasharray};
+    cx: ${COUNTDOWN_PROPERTIES[size].circle.cx};
+    cy: ${COUNTDOWN_PROPERTIES[size].circle.cy};
+    r: ${COUNTDOWN_PROPERTIES[size].circle.r};
+  `;
+};
+
 export const Circle = styled.circle`
   stroke: url(#gradient-color);
   strokeLinecap="round";
   stroke-width: 20px;
   stroke-dashoffset: 0;
-  stroke-dasharray: ${({ size }) => COUNTDOWN_PROPERTIES[size].circle.dasharray};
-  cx: ${({ size }) => COUNTDOWN_PROPERTIES[size].circle.cx};
-  cy: ${({ size }) => COUNTDOWN_PROPERTIES[size].circle.cy};
-  r: ${({ size }) => COUNTDOWN_PROPERTIES[size].circle.r};
   fill: none;
+  ${styleCircleBySize}
 `;
