@@ -65,11 +65,12 @@ const CountdownStrokeAnimation = keyframes`
 `;
 
 // duration is in time units of seconds
-const styleCircleByProps = ({ size, duration }) => {
+const styleCircleByProps = ({ size, duration, gradientColorId }) => {
   return css`
     --dasharray: ${COUNTDOWN_PROPERTIES[size].circle.dasharray}px;
     stroke-dasharray: var(--dasharray);
     stroke-dashoffset: var(--dasharray);
+    stroke: url(#${gradientColorId});
     cx: ${COUNTDOWN_PROPERTIES[size].circle.cx};
     cy: ${COUNTDOWN_PROPERTIES[size].circle.cy};
     r: ${COUNTDOWN_PROPERTIES[size].circle.r};
@@ -78,7 +79,6 @@ const styleCircleByProps = ({ size, duration }) => {
 };
 
 export const Circle = styled.circle`
-  stroke: url(#gradient-color);
   strokelinecap: round;
   stroke-width: 20px;
   fill: none;

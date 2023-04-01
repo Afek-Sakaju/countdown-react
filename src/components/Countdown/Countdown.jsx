@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { v4 as uuid } from "uuid";
 
 import {
   CountdownContentWrapper,
@@ -20,6 +21,7 @@ function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
   else if (totalSeconds > MAXIMUM_TIME_LIMIT) totalSeconds = MAXIMUM_TIME_LIMIT;
 
   size = isCompatibleSize(size) ? size : "medium";
+  const gradientColorId = uuid();
 
   return (
     <CountdownContentWrapper size={size}>
@@ -33,12 +35,16 @@ function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
         </InnerContainer>
         <CountdownSvg>
           <defs>
-            <linearGradient id="gradient-color">
+            <linearGradient id={gradientColorId}>
               <stop offset="0%" stopColor={color1} />
               <stop offset="100%" stopColor={color2} />
             </linearGradient>
           </defs>
-          <Circle size={size} duration={totalSeconds} />
+          <Circle
+            size={size}
+            duration={totalSeconds}
+            gradientColorId={gradientColorId}
+          />
         </CountdownSvg>
       </OuterContainer>
     </CountdownContentWrapper>

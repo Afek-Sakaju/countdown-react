@@ -19,6 +19,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 100px;
   min-height: 98vh;
   min-width: 98vw;
 }
