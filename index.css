@@ -1,0 +1,26 @@
+body,
+html,
+#master {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font: normal 16px "FiraSans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  height: 60vh;
+  width: 40vw;
+}
