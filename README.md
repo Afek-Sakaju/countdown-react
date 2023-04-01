@@ -6,7 +6,7 @@
 
 ---
 
-**Live demo:**</br>[color-clearing-game](https://afektheminilearner.github.io/countdown-react/)
+**Live demo:** </br>[circular-countdown-react](https://afektheminilearner.github.io/countdown-react/)
 
 ---
 
