@@ -9,7 +9,7 @@ import {
   Circle,
   CountdownSvg,
 } from "./Countdown.styled";
-import { TimeDisplay } from "../../base-components";
+import TimeDisplay from "../../base-components";
 import {
   MAXIMUM_TIME_LIMIT,
   MINIMUM_TIME_LIMIT,
