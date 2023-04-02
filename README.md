@@ -28,7 +28,7 @@
 
 ```js
 import React from "react";
-import { Countdown } from "circular-countdown-react";
+import Countdown from "circular-countdown-react";
 
 function App() {
   return (
