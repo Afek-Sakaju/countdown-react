@@ -24,6 +24,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -39,6 +44,7 @@
     "build": "del dist && babel src --out-dir dist --copy-files",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
+    "lint": "eslint --ext .jsx --ext .js .",
     "predeploy": "react-scripts build",
     "deploy": "gh-pages -d build"
   },
@@ -86,6 +92,7 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
     "gh-pages": "^5.0.0",
+    "prettier": "^2.3.0",
     "sass": "^1.59.3",
     "webpack": "^5.76.2"
   }

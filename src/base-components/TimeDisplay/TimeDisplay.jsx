@@ -22,6 +22,7 @@ function TimeDisplay({ totalSeconds, onDone, shouldStop }) {
       }, 1000);
 
     return () => {
+      // eslint-disable-next-line no-unused-expressions
       intervalId && clearInterval(intervalId);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
