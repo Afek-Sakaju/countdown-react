@@ -1,6 +1,6 @@
 # Circular-Countdown-React
 
-### This NPM package provides a reusable countdown timer component for ReactJS applications. It allows developers to easily implement a countdown feature with customizable options such as size, color, and duration. The component is built using ReactJS, CSS, and Styled-Components to ensure optimal design and functionality. <br />
+### This NPM package provides a reusable countdown timer component for ReactJS applications. It allows developers to easily implement a countdown feature with customizable options such as size, color, and duration. The component is built using ReactJS, CSS, Styled-Components and ESLINT to ensure optimal design and functionality. <br />
 
 <img src="./readme-resources/stopwatch.png" width=150px height=150px align="right">
 
