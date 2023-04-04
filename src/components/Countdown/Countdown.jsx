@@ -63,7 +63,7 @@ export default function Countdown({
 }
 
 Countdown.propTypes = {
-  size: PropTypes.string,
+  size: PropTypes.oneOf(Object.values(COUNTDOWN_SIZES)),
   color1: PropTypes.string,
   color2: PropTypes.string,
   totalSeconds: PropTypes.number,
