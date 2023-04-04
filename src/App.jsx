@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./index.css";
-import Countdown from "./components";
+import { Countdown } from "./components";
 
-function App() {
+export default function App() {
   return (
     <div className="app-container">
       <Countdown
@@ -20,5 +20,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

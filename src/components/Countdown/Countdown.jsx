@@ -9,14 +9,21 @@ import {
   Circle,
   CountdownSvg,
 } from "./Countdown.styled";
-import TimeDisplay from "../../base-components";
+import { TimeDisplay } from "../../base-components";
 import {
   MAXIMUM_TIME_LIMIT,
   MINIMUM_TIME_LIMIT,
   isCompatibleSize,
 } from "../../utils";
 
-function Countdown({ size, color1, color2, totalSeconds, onDone, shouldStop }) {
+export default function Countdown({
+  size,
+  color1,
+  color2,
+  totalSeconds,
+  onDone,
+  shouldStop,
+}) {
   if (totalSeconds < MINIMUM_TIME_LIMIT) totalSeconds = MINIMUM_TIME_LIMIT;
   else if (totalSeconds > MAXIMUM_TIME_LIMIT) totalSeconds = MAXIMUM_TIME_LIMIT;
 
@@ -68,5 +75,3 @@ Countdown.defaultProps = {
   onDone: undefined,
   shouldStop: undefined,
 };
-
-export default Countdown;

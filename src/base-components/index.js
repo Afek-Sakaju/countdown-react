@@ -1,3 +1,3 @@
-import TimeDisplay from "./TimeDisplay/TimeDisplay";
+export {default as TimeDisplay} from "./TimeDisplay/TimeDisplay";
 
-export default TimeDisplay;
+

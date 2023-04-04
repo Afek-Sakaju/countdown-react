@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
-function TimeDisplay({ totalSeconds, onDone, shouldStop }) {
+export default function TimeDisplay({ totalSeconds, onDone, shouldStop }) {
   const [time, setTime] = useState(totalSeconds);
   const updatedSeconds = useRef(totalSeconds);
   const isTimeZero = updatedSeconds.current === 0;
@@ -48,5 +48,3 @@ TimeDisplay.defaultProps = {
   onDone: undefined,
   shouldStop: undefined,
 };
-
-export default TimeDisplay;
