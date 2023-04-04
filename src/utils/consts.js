@@ -1,5 +1,5 @@
-export const MINIMUM_TIME_LIMIT = 0;
-export const MAXIMUM_TIME_LIMIT = 359999;
+export const MINIMUM_TIME_LIMIT = 0; // 00:00:00
+export const MAXIMUM_TIME_LIMIT = 359999; // 99:59:59
 
 export const COUNTDOWN_SIZES = {
   small: "small",

@@ -14,7 +14,7 @@ import {
   MAXIMUM_TIME_LIMIT,
   MINIMUM_TIME_LIMIT,
   COUNTDOWN_SIZES,
-  isCompatibleSize,
+  assertCompatibleSize,
 } from "../../utils";
 
 export default function Countdown({
@@ -28,9 +28,9 @@ export default function Countdown({
   if (totalSeconds < MINIMUM_TIME_LIMIT) totalSeconds = MINIMUM_TIME_LIMIT;
   else if (totalSeconds > MAXIMUM_TIME_LIMIT) totalSeconds = MAXIMUM_TIME_LIMIT;
 
-  size =
-    isCompatibleSize(COUNTDOWN_SIZES[size.toLowerCase()]) ||
-    COUNTDOWN_SIZES.medium;
+  size = assertCompatibleSize(size, COUNTDOWN_SIZES)
+    ? size
+    : COUNTDOWN_SIZES.medium;
 
   const gradientColorId = uuid();
 
