@@ -51,8 +51,8 @@ export const Custom = Template.bind({});
 Custom.argTypes = {
   size: {
     control: "inline-radio",
-    options: COUNTDOWN_SIZES,
-    defaultValue: COUNTDOWN_SIZES[0],
+    options: Object.values(COUNTDOWN_SIZES),
+    defaultValue: COUNTDOWN_SIZES.medium,
   },
   color1: {
     control: { type: "color" },
