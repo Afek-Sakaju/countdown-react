@@ -15,7 +15,6 @@ export const CountdownContentWrapper = styled.div`
 
   .countdown-time-display {
     font-size: ${({ size }) => COUNTDOWN_PROPERTIES[size].timeDisplay.fontSize};
-    font-weight: bold;
   }
 `;
 

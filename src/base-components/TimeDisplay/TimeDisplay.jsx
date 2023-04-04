@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
+import { TimeDisplayContainer } from "./TimeDisplay.styled";
+
 export default function TimeDisplay({ totalSeconds, onDone, shouldStop }) {
   const [time, setTime] = useState(totalSeconds);
   const updatedSeconds = useRef(totalSeconds);
@@ -34,7 +36,7 @@ export default function TimeDisplay({ totalSeconds, onDone, shouldStop }) {
   const timeUnitsText =
     hours === "00" ? `${minutes}:${seconds}` : `${hours}:${minutes}:${seconds}`;
 
-  return <div className="countdown-time-display">{timeUnitsText}</div>;
+  return <TimeDisplayContainer>{timeUnitsText}</TimeDisplayContainer>;
 }
 
 TimeDisplay.propTypes = {
