@@ -12,17 +12,17 @@ export const COUNTDOWN_PROPERTIES = {
   the svg circle requires style fields that are calculated 
   using the properties of the wrapper 
   - The number related to px */
-  small: {
+  [COUNTDOWN_SIZES.small]: {
     circle: { cx: 80, cy: 80, r: 70, dasharray: 450 },
     timeDisplay: { fontSize: "1.45em" },
     wrapper: { width: 160, height: 160 },
   },
-  medium: {
+  [COUNTDOWN_SIZES.medium]: {
     circle: { cx: 90, cy: 90, r: 80, dasharray: 510 },
     timeDisplay: { fontSize: "1.65em" },
     wrapper: { width: 180, height: 180 },
   },
-  large: {
+  [COUNTDOWN_SIZES.large]: {
     circle: { cx: 100, cy: 100, r: 90, dasharray: 570 },
     timeDisplay: { fontSize: "1.85em" },
     wrapper: { width: 200, height: 200 },
