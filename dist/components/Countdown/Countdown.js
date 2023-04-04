@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = Countdown;
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _uuid = require("uuid");
@@ -19,7 +19,7 @@ function Countdown(_ref) {
     onDone = _ref.onDone,
     shouldStop = _ref.shouldStop;
   if (totalSeconds < _utils.MINIMUM_TIME_LIMIT) totalSeconds = _utils.MINIMUM_TIME_LIMIT;else if (totalSeconds > _utils.MAXIMUM_TIME_LIMIT) totalSeconds = _utils.MAXIMUM_TIME_LIMIT;
-  size = (0, _utils.isCompatibleSize)(size) ? size : "medium";
+  size = (0, _utils.assertCompatibleSize)(size, _utils.COUNTDOWN_SIZES) ? size : _utils.COUNTDOWN_SIZES.medium;
   var gradientColorId = (0, _uuid.v4)();
   return /*#__PURE__*/_react.default.createElement(_Countdown.CountdownContentWrapper, {
     size: size
@@ -44,7 +44,7 @@ function Countdown(_ref) {
   }))));
 }
 Countdown.propTypes = {
-  size: _propTypes.default.string,
+  size: _propTypes.default.oneOf(Object.values(_utils.COUNTDOWN_SIZES)),
   color1: _propTypes.default.string,
   color2: _propTypes.default.string,
   totalSeconds: _propTypes.default.number,
@@ -59,5 +59,3 @@ Countdown.defaultProps = {
   onDone: undefined,
   shouldStop: undefined
 };
-var _default = Countdown;
-exports.default = _default;

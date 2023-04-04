@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = App;
 var _react = _interopRequireDefault(require("react"));
 require("./index.css");
 var _components = require("./components");
@@ -39,5 +39,3 @@ function App() {
     totalSeconds: 10
   }));
 }
-var _default = App;
-exports.default = _default;

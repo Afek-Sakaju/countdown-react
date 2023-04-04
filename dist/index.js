@@ -9,4 +9,4 @@ Object.defineProperty(exports, "Countdown", {
     return _components.Countdown;
   }
 });
-var _components = require("./components/");
+var _components = require("./components");

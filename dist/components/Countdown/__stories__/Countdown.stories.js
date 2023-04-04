@@ -52,8 +52,8 @@ exports.Custom = Custom;
 Custom.argTypes = {
   size: {
     control: "inline-radio",
-    options: _utils.COUNTDOWN_SIZES,
-    defaultValue: _utils.COUNTDOWN_SIZES[0]
+    options: Object.values(_utils.COUNTDOWN_SIZES),
+    defaultValue: _utils.COUNTDOWN_SIZES.medium
   },
   color1: {
     control: {
