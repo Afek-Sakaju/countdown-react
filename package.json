@@ -46,7 +46,8 @@
     "build-storybook": "build-storybook -s public",
     "lint": "eslint --ext .jsx --ext .js .",
     "predeploy": "react-scripts build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "build-jsdocs": "jsdoc src/utils/functions.js -d js-docs"
   },
   "eslintConfig": {
     "extends": [
