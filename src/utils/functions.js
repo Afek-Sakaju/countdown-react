@@ -1,6 +1,9 @@
-/*  assertCompatibleSize function accepts the string "size" and 
-object "sizesObject" then returns true if its compatible, which means exists
-in the sizesObject's values, if it doesn't, the function returns false */
+/**
+ * Determines if the provided size is compatible with the given sizes object.
+ * @param {string} size - The size to check compatibility for.
+ * @param {object} sizesObject - The object containing the compatible sizes.
+ * @returns {boolean} - True if the size is compatible, false otherwise.
+ */
 export function assertCompatibleSize(size, sizesObject) {
   return Object.values(sizesObject).some((compatibleSize) => {
     return compatibleSize === size;
