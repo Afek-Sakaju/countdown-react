@@ -51,6 +51,9 @@ export default App;
 **Installation:**</br>
 run the following command on your terminal:</br> _`npm install circular-countdown-react`_
 
+**(optional) Testing the utils function with js-docs:**</br>
+run the following command on your terminal:</br> _`npm run build-jsdocs`_</br>then open the 'index.html' file inside the folder 'js-docs'.
+
 ---
 
 ### **Example of using the countdown component:**
