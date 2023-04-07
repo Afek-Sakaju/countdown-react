@@ -1,7 +1,7 @@
 import React from "react";
 
-import CountDown from "../Countdown";
-import { COUNTDOWN_SIZES } from "../../../utils";
+import CountDown from "@components/Countdown";
+import { COUNTDOWN_SIZES } from "@utils";
 
 export default {
   title: "components/CountDown",
