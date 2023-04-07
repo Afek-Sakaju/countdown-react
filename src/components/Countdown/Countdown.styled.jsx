@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 
-import { COUNTDOWN_PROPERTIES } from "../../utils";
+import { COUNTDOWN_PROPERTIES } from "@utils";
 
 export const CountdownContentWrapper = styled.div`
   position: relative;

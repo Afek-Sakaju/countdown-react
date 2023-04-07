@@ -2,6 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { v4 as uuid } from "uuid";
 
+import { TimeDisplay } from "@base-components";
+import {
+  MAXIMUM_TIME_LIMIT,
+  MINIMUM_TIME_LIMIT,
+  COUNTDOWN_SIZES,
+  assertCompatibleSize,
+} from "@utils";
 import {
   CountdownContentWrapper,
   OuterContainer,
@@ -9,13 +16,6 @@ import {
   Circle,
   CountdownSvg,
 } from "./Countdown.styled";
-import { TimeDisplay } from "../../base-components";
-import {
-  MAXIMUM_TIME_LIMIT,
-  MINIMUM_TIME_LIMIT,
-  COUNTDOWN_SIZES,
-  assertCompatibleSize,
-} from "../../utils";
 
 export default function Countdown({
   size,
