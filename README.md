@@ -54,6 +54,9 @@ run the following command on your terminal:</br> _`npm install circular-countdow
 **(optional) Testing the utils function with js-docs:**</br>
 run the following command on your terminal:</br> _`npm run build-jsdocs`_</br>then open the 'index.html' file inside the folder 'js-docs'.
 
+**Peer dependencies:**</br>
+_styled-components_
+
 ---
 
 ### **Example of using the countdown component:**
