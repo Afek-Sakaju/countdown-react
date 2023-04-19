@@ -46,10 +46,10 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@src", "./src/"],
-          ["@components", "./src/components/"],
-          ["@base-components", "./src/base-components/"],
-          ["@utils", "./src/utils/"]
+          ["@countdown@src", "./src/"],
+          ["@countdown@components", "./src/components/"],
+          ["@countdown@base-components", "./src/base-components/"],
+          ["@countdown@utils", "./src/utils/"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
