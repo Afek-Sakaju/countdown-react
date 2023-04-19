@@ -54,26 +54,48 @@ export const CountdownSvg = styled.svg.attrs({
   left: 0;
 `;
 
-const CountdownStrokeAnimation = keyframes`
-  0% {
+const circleStrokeAnimation = keyframes`
+  from {
     stroke-dashoffset: 0;
   }
-  100% {
+  to {
     stroke-dashoffset: var(--dasharray);
   }
 `;
 
-// duration is in time units of seconds
-const styleCircleByProps = ({ size, duration, gradientColorId }) => {
+const colorsChangeAnimation = keyframes`
+  0% {
+    stroke: #00ff00; 
+  }
+  20% {
+    stroke: #2bff00;
+  }
+  40% {
+    stroke: #5fff00;
+  }
+  60% {
+    stroke: #ffbf00;
+  }
+  80% {
+    stroke: #ff4000;
+  }
+  100% {
+    stroke: #ff0000;
+  }
+`;
+
+
+const styleCircleByProps = ({ size, duration }) => {
   return css`
     --dasharray: ${COUNTDOWN_PROPERTIES[size].circle.dasharray}px;
     stroke-dasharray: var(--dasharray);
     stroke-dashoffset: var(--dasharray);
-    stroke: url(#${gradientColorId});
+    stroke: green;
     cx: ${COUNTDOWN_PROPERTIES[size].circle.cx};
     cy: ${COUNTDOWN_PROPERTIES[size].circle.cy};
     r: ${COUNTDOWN_PROPERTIES[size].circle.r};
-    animation: ${CountdownStrokeAnimation} ${duration}s linear;
+    animation: ${circleStrokeAnimation} ${duration}s linear,
+      ${colorsChangeAnimation} ${duration}s linear;
   `;
 };
 

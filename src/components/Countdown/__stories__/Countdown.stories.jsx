@@ -54,14 +54,6 @@ Custom.argTypes = {
     options: Object.values(COUNTDOWN_SIZES),
     defaultValue: COUNTDOWN_SIZES.medium,
   },
-  color1: {
-    control: { type: "color" },
-    defaultValue: "red",
-  },
-  color2: {
-    control: { type: "color" },
-    defaultValue: "blue",
-  },
   shouldStop: {
     control: { type: "boolean" },
     defaultValue: false,
