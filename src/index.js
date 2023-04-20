@@ -1,1 +1,1 @@
-export { Countdown } from "@countdown@components";
+export { Countdown } from "./components";
