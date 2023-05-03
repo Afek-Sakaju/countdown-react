@@ -7,7 +7,7 @@
     "react",
     "components"
   ],
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -48,7 +48,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "craco-alias": "^3.0.1",
     "eslint": "^8.37.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
@@ -80,7 +79,6 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "gh-pages": "^5.0.0",
     "prettier": "^2.3.0",
-    "sass": "^1.59.3",
     "webpack": "^5.76.2"
   }
 }
