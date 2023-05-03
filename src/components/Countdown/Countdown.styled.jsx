@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 
-import { COUNTDOWN_PROPERTIES } from "@countdown@utils";
+import { COUNTDOWN_PROPERTIES } from "../../utils";
 
 export const CountdownContentWrapper = styled.div`
   position: relative;
@@ -83,7 +83,6 @@ const colorsChangeAnimation = keyframes`
     stroke: #ff0000;
   }
 `;
-
 
 const styleCircleByProps = ({ size, duration }) => {
   return css`

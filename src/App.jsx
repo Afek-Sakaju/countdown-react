@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./index.css";
-import { Countdown } from "@countdown@components";
+import { Countdown } from "./components";
 
 export default function App() {
   return (

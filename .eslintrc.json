@@ -41,18 +41,5 @@
       }
     ],
     "react/prop-types": [2, { "ignore": ["children"] }]
-  },
-  "settings": {
-    "import/resolver": {
-      "alias": {
-        "map": [
-          ["@countdown@src", "./src/"],
-          ["@countdown@components", "./src/components/"],
-          ["@countdown@base-components", "./src/base-components/"],
-          ["@countdown@utils", "./src/utils/"]
-        ],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
   }
 }
