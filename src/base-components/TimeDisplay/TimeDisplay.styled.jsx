@@ -5,4 +5,5 @@ export const TimeDisplayContainer = styled.div.attrs({
 })`
   font-size: 1em;
   font-weight: bold;
+  user-select: none;
 `;
