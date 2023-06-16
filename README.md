@@ -1,6 +1,6 @@
 # Countdown-React
 
-### This NPM package offers a reusable countdown timer component tailored for ReactJS applications, enabling developers to effortlessly integrate a countdown feature with customizable options. The component is developed using ReactJS, CSS, Styled-Components, and ESLint, ensuring a seamless blend of design and functionality. <br />
+### This NPM package offers a reusable countdown timer component tailored for ReactJS applications, enabling developers to effortlessly integrate a countdown feature with customizable options. The component is developed using ReactJS, Styled-Components, and ESLint, ensuring a seamless blend of design and functionality. <br />
 
 <img src="./readme-resources/stopwatch.png" width=150px height=150px align="right">
 
