@@ -57,7 +57,7 @@ export default App;
 
 ---
 
-### **Example of using the countdown component:**
+### **Here's an example showcasing the utilization of the countdown component:**
 
 ![Example-GIF](./readme-resources/countdown-gif.gif)
 
