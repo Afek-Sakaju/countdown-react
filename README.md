@@ -1,6 +1,6 @@
-# Circular-Countdown-React
+# Countdown-React
 
-### This NPM package provides a reusable countdown timer component for ReactJS applications. It allows developers to easily implement a countdown feature with customizable options such as size, color, and duration. The component is built using ReactJS, CSS, Styled-Components and ESLINT to ensure optimal design and functionality. <br />
+### This NPM package offers a reusable countdown timer component tailored for ReactJS applications, enabling developers to effortlessly integrate a countdown feature with customizable options. The component is developed using ReactJS, CSS, Styled-Components, and ESLint, ensuring a seamless blend of design and functionality. <br />
 
 <img src="./readme-resources/stopwatch.png" width=150px height=150px align="right">
 
@@ -12,18 +12,16 @@
 
 ## Configuration Options
 
-### This circular countdown component offers a variety of configuration options to customize its appearance and functionality, including:
+### The countdown component offers a variety of configuration options to customize its appearance and functionality, including:
 
-- **size**: The countdown can be displayed in 3 sizes: large, medium, small.
-- **totalSeconds**: The duration of the countdown in total seconds.
-- **onDone**: Its optional to pass a function the will be executed when the countdown finishes.
-- **shouldStop**: Its optional to allow the countdown to be more responsive by passing here state that can change as you need to, otherwise it can be used as static countdown.
+- **size**: You have the option to showcase the countdown face in 3 sizes: large, medium, small.
+- **totalSeconds**: The countdown duration is specified in total seconds.
+- **onDone**: You have the flexibility to optionally provide a function that will be executed when the countdown finishes.
+- **shouldStop**: Allows for a more responsive countdown by accepting a changing state, while also supporting static countdown usage.
 
 </br>
 
 ## Usage
-
-**Example of using the countdown in react app file, customized with the mentioned props**:
 
 ```js
 import React from "react";
@@ -46,13 +44,16 @@ export default App;
 ```
 
 **Installation:**</br>
-run the following command on your terminal:</br> _`npm install circular-countdown-react`_
 
-**(optional) Testing the utils function with js-docs:**</br>
-run the following command on your terminal:</br> _`npm run build-jsdocs`_</br>then open the 'index.html' file inside the folder 'js-docs'.
+- `npm install circular-countdown-react` <br /> Include the package in your project's dependencies.
 
 **Peer dependencies:**</br>
-_styled-components_
+
+- _styled-components_
+
+**Development:**</br>
+
+- `npm run build-jsdocs`</br>For JSDocs of the utils functions, after running open the 'index.html' file located inside the 'js-docs' folder.
 
 ---
 
