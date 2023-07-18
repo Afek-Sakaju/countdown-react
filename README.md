@@ -6,7 +6,7 @@
 
 ---
 
-**Live demo:** </br>[circular-countdown-react](https://afektheminilearner.github.io/countdown-react/)
+**Live demo:** </br>[circular-countdown-react](https://Afek-Sakaju.github.io/countdown-react/)
 
 ---
 
@@ -68,4 +68,4 @@ export default App;
 :octocat: **Afek Sakaju**
 
 - LinkedIn: [@afeksa](https://www.linkedin.com/in/afeksa/)
-- GitHub: [@afekTheMiniLearner](https://github.com/afekTheMiniLearner)
+- GitHub: [@Afek-Sakaju](https://github.com/Afek-Sakaju)
