@@ -1,6 +1,6 @@
 {
     "name": "circular-countdown-react",
-    "description": "Circular countdown configurable component",
+    "description": "This NPM package presents a circular-countdown component for ReactJS applications, it offers intuitive and visually appealing clock feature with easy integration capabilities.",
     "author": "afek-sakaju",
     "homepage": "http://Afek-Sakaju.github.io/countdown-react",
     "keywords": [
